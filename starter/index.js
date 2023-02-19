@@ -104,13 +104,16 @@ var difference_in_value = 0;
 var monthy_difference_calculation = 0;
 
 
-var biggest_profit_valiue = 0;
+var biggest_profit_value = 0;
 var biggest_profit_data = 0;
 var biggest_loss_value = 0;
 var biggest_loss_data = 0;
 
 var biggest_profit
 var biggest_loss
+
+var analysis
+var count 
 
 
 
@@ -130,7 +133,7 @@ for (let i = 0; i < finances.length; i++) {
 
     //push value 
 
-    biggest_profit_valiue = difference_in_value 
+    biggest_profit_value = difference_in_value 
     biggest_loss_value = difference_in_value
 
    }
@@ -139,17 +142,19 @@ for (let i = 0; i < finances.length; i++) {
     difference_in_value = money_value - previous_month
     //push value 
 
-}
-
-
     // Itteration in positive 
 
+    if (difference_in_value > biggest_profit_data) {
+
+        biggest_profit_value = difference_in_value
+        biggest_profit_data = count
+    }
 
 
 
     // Itteration in negative 
 
-
+}
 
     // profit vs loss 
 
