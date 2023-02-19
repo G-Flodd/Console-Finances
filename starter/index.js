@@ -129,6 +129,11 @@ for (let i = 0; i < finances.length; i++) {
    if (count === 1) {
     difference_in_value = money_value - previous_month;
 
+    //push value 
+
+    biggest_profit_valiue = difference_in_value 
+    biggest_loss_value = difference_in_value
+
    }
 
 
