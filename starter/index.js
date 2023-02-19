@@ -92,16 +92,16 @@ var finances = [
 // set out all variables for the project 
 var months = finances.length;
 
-var profit = 0; 
+var profit = 0;
 var loss = 0;
-var total = 0; 
+var total = 0;
 
-var average_change; 
+var average_change;
 
-var previous_month; 
-var monthy_difference = [];
+var previous_month;
+var monthly_difference = [];
 var difference_in_value = 0;
-var monthy_difference_calculation = 0;
+var monthly_difference_calculation = 0;
 
 
 var biggest_profit_value = 0;
@@ -113,63 +113,81 @@ var biggest_profit
 var biggest_loss
 
 var analysis
-var count 
+var count =0;
 
 
 for (let i = 0; i < finances.length; i++) {
 
     // pulls the month value from the array
 
-    var money_value = finances [i] [1] ; 
+    var money_value = finances[i][1];
 
 
-   // adds the difference between each month
+    // adds the difference between each month
 
-   if (count === 1) {
-    difference_in_value = money_value - previous_month;
-
-    //push value 
-
-    biggest_profit_value = difference_in_value 
-    biggest_loss_value = difference_in_value
-
-   }
- else if (count > 1) {
-
-    difference_in_value = money_value - previous_month
-    //push value 
-
-    // Itteration in positive 
-
-    if (difference_in_value > biggest_profit_data) {
+    if (count === 1) {
+        difference_in_value = money_value - previous_month;
+        monthly_difference.push(difference_in_value);
 
         biggest_profit_value = difference_in_value
-        biggest_profit_data = count
-    }
-    // Itteration in negative 
-    else if (difference_in_value > biggest_loss_data) {
-
         biggest_loss_value = difference_in_value
-        biggest_loss_data = count
+
     }
-}
+    else if (count > 1) {
+
+        difference_in_value = money_value - previous_month
+        monthly_difference.push(difference_in_value);
+
+        // Itteration in positive 
+
+        if (difference_in_value > biggest_profit_data) {
+
+            biggest_profit_value = difference_in_value
+            biggest_profit_data = count
+        }
+        // Itteration in negative 
+        else if (difference_in_value < biggest_loss_data) {
+
+            biggest_loss_value = difference_in_value
+            biggest_loss_data = count
+        }
+    }
 
     // profit vs loss 
 
-     if (money_value > 0) {
+    if (money_value > 0) {
         profit = profit + money_value
-     }
-     else if (money_value < 0 ) {
+    }
+    else if (money_value < 0) {
         loss = loss + money_value
-     }
+    }
+    previous_month = money_value;
 
-
-    // pushes current month
-
-     last????????
-
-
-     for (let k = 0 ??????)
-
+    count++;
 }
 
+
+for (let i = 0; i < monthly_difference.length; i++) {
+    monthly_difference_calculation = monthly_difference_calculation + monthly_difference[i];
+}
+
+total = profit + loss;
+
+average_change = (monthly_difference_calculation / monthly_difference.length).toFixed(2);
+
+biggest_profit = finances[biggest_profit_data];
+biggest_loss = finances[biggest_loss_data];
+
+
+
+analysis = 'Financial Analysis' + '\n'
+    + '----------------------' + '\n'
+    + 'Total Months: ' + months + '\n'
+    + 'Total: £' + total + '\n'
+    + 'Average Change: -£' + (average_change * -1) + '\n'
+    + 'Greatest Increase: ' + biggest_profit[0] + ' - there was an increase of: £' + biggest_profit_value + '\n'
+    + 'Greatest Decrease: ' + biggest_loss[0] + ' - there was a decrease of: -£' + (biggest_loss_value * -1)
+    ;
+
+
+console.log(analysis);
