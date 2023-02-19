@@ -156,8 +156,20 @@ for (let i = 0; i < finances.length; i++) {
 
     // profit vs loss 
 
+     if (money_value > 0) {
+        profit = profit + money_value
+     }
+     else if (money_value < 0 ) {
+        loss = loss + money_value
+     }
 
 
+    // pushes current month
+
+     last????????
+
+
+     for (let k = 0 ??????)
 
 }
 
