@@ -103,9 +103,11 @@ var monthy_difference;
 var difference_in_value;
 var monthy_difference_calculation
 
+
 var biggest_profit_valiue
 
 var biggest_loss_value
+
 
 var biggest_profit
 
@@ -117,11 +119,29 @@ var biggest_loss
 
 for (let i = 0; i < finances.length; i++) {
 
-    for (let j = 0; j < finances.length; j++) {
-        if (j > 0) {
-            profit = profit + j
-        }
-    }
+    // pulls the month value from the array
+
+
+
+
+   // adds the difference between each month
+
+
+   
+
+    // Itteration in positive 
+
+
+
+
+    // Itteration in negative 
+
+
+
+    // profit vs loss 
+
+
+
 
 }
 
