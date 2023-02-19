@@ -1,4 +1,5 @@
 var finances = [
+
     ['Jan-2010', 867884],
     ['Feb-2010', 984655],
     ['Mar-2010', 322013],
@@ -96,6 +97,21 @@ var loss = 0;
 var total = 0; 
 
 var average_change; 
+
+var previous_month; 
+var monthy_difference;
+var difference_in_value;
+var monthy_difference_calculation
+
+var biggest_profit_valiue
+
+var biggest_loss_value
+
+var biggest_profit
+
+var biggest_loss
+
+
 
 
 
