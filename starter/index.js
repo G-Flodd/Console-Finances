@@ -87,10 +87,17 @@ var finances = [
     ['Feb-2017', 671099]
 ];
 
+
+// set out all variables for the project 
 var months = finances.length;
 
-var profit;
-var loss;
+var profit = 0; 
+var loss = 0;
+var total = 0; 
+
+var average_change; 
+
+
 
 for (let i = 0; i < finances.length; i++) {
 
