@@ -121,13 +121,17 @@ for (let i = 0; i < finances.length; i++) {
 
     // pulls the month value from the array
 
-
+    var money_value = finances [i] [1] ; 
 
 
    // adds the difference between each month
 
+   if (count === 1) {
+    difference_in_value = money_value - previous_month;
 
-   
+   }
+
+
 
     // Itteration in positive 
 
