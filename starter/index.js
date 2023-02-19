@@ -116,9 +116,6 @@ var analysis
 var count 
 
 
-
-
-
 for (let i = 0; i < finances.length; i++) {
 
     // pulls the month value from the array
@@ -149,11 +146,12 @@ for (let i = 0; i < finances.length; i++) {
         biggest_profit_value = difference_in_value
         biggest_profit_data = count
     }
-
-
-
     // Itteration in negative 
+    else if (difference_in_value > biggest_loss_data) {
 
+        biggest_loss_value = difference_in_value
+        biggest_loss_data = count
+    }
 }
 
     // profit vs loss 
